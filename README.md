@@ -1,21 +1,25 @@
-# 🤖 Robot Framework Web Automation
+# 🤖 Robot Framework - Automação Web E-commerce
 
-Projeto de automação web utilizando Robot Framework com Selenium,
-seguindo boas práticas como Page Object Model e BDD.
+Projeto de automação de testes web utilizando Robot Framework com Selenium,
+aplicando BDD e boas práticas de Page Object.
 
-## 🧰 Tecnologias
+## 🧪 Tecnologias
 - Robot Framework
 - SeleniumLibrary
 - Python
-- ChromeDriver
+- BDD (Gherkin style)
+- Git & GitHub
 
-## 📁 Estrutura
-- tests: cenários de teste
-- pages: mapeamento de elementos
-- keywords: regras de negócio
-- variables: variáveis globais
+## 📂 Estrutura do Projeto
+- tests/
+- resources/
+  - pages/
+  - keywords/
+- variables/
 
-## 🚀 Como executar
+## ▶️ Como executar
 ```bash
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 robot tests/
