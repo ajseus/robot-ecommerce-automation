@@ -1,0 +1,11 @@
+# Ambiente virtual
+venv/
+
+# Resultados do Robot
+*.html
+*.xml
+*.png
+results/
+
+# Cache
+__pycache__/
