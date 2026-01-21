@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.6 on win32)" generated="2026-01-21T18:33:18.182771" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Andressa\robot-ecommerce-automation\tests">
+<suite id="s1-s1" name="Login Tests" source="C:\Users\Andressa\robot-ecommerce-automation\tests\login_tests.robot">
+<kw name="Abrir Navegador" owner="base" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-21T18:33:18.407403" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>--headless</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-21T18:33:18.406987" elapsed="1.728495"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.135758" elapsed="0.025039"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:18.406446" elapsed="1.754557"/>
+</kw>
+<test id="s1-s1-t1" name="Login com sucesso" line="8">
+<kw name="Dado que o usuário acessa a página de login" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-21T18:33:20.162280" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.162135" elapsed="0.044859"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:20.161845" elapsed="0.045305"/>
+</kw>
+<kw name="Quando informa usuário e senha válidos" owner="login_keywords">
+<kw name="Preencher usuário" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-21T18:33:20.208695" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${INPUT_USERNAME}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.208340" elapsed="0.089160"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2026-01-21T18:33:20.208066" elapsed="0.089542"/>
+</kw>
+<kw name="Preencher senha" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-21T18:33:20.298246" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.298039" elapsed="0.059535"/>
+</kw>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-01-21T18:33:20.297777" elapsed="0.059907"/>
+</kw>
+<kw name="Clicar em login" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-21T18:33:20.358253" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.358070" elapsed="0.077707"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:20.357843" elapsed="0.078061"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:20.207633" elapsed="0.228333"/>
+</kw>
+<kw name="Então o login deve ser realizado com sucesso" owner="login_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-21T18:33:20.447195" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.436641" elapsed="0.010642"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:20.436349" elapsed="0.011019"/>
+</kw>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-01-21T18:33:20.161103" elapsed="0.286573"/>
+</test>
+<kw name="Fechar Navegador" owner="base" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-01-21T18:33:20.448625" elapsed="2.121446"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:20.448447" elapsed="2.121851"/>
+</kw>
+<status status="PASS" start="2026-01-21T18:33:18.217753" elapsed="4.352622"/>
+</suite>
+<status status="PASS" start="2026-01-21T18:33:18.183949" elapsed="4.387576"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
